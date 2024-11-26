@@ -1,0 +1,71 @@
+<!-- frontend/public/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Sky Books</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="blue">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Sky Books</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h3>Register</h3>
+    <form id="registration-form"
+          hx-post="http://localhost:3000/users/profile"
+          hx-trigger="submit"
+          hx-include="#registration-form"
+          hx-target="#registration-form"
+          hx-swap="outerHTML">
+      <div class="input-field">
+        <input id="starCitizenUsername" name="starCitizenUsername" type="text" required>
+        <label for="starCitizenUsername">Star Citizen Username</label>
+      </div>
+      <div class="input-field">
+        <select id="organizations" name="organizations" multiple required
+          hx-get="http://localhost:3000/organizations/options"
+          hx-params="none"
+          hx-trigger="load"
+          hx-target="#organizations"
+          hx-swap="innerHTML">
+          <!-- Options will be loaded via HTMX -->
+        </select>
+        <label for="organizations">Select Organizations (1 to 6)</label>
+      </div>
+      <div class="input-field">
+        <select id="primaryOrganization" name="primaryOrganizationId" required
+            hx-get="http://localhost:3000/organizations/options"
+            hx-params="none"
+            hx-trigger="load"
+            hx-target="#primaryOrganization"
+            hx-swap="innerHTML">
+          <!-- Options will be loaded via HTMX -->
+        </select>
+        <label for="primaryOrganization">Primary Organization</label>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit">Register</button>
+    </form>
+  </div>
+
+  <!-- Scripts -->
+  <!-- HTMX -->
+  <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+  <!-- Cookie JS -->
+  <script src="assets/js/cookie.js"></script>
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+  
+</body>
+</html>

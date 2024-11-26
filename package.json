@@ -1,0 +1,11 @@
+{
+    "name": "sky-books-frontend",
+    "version": "1.0.0",
+    "description": "Sky Books Frontend",
+    "scripts": {
+        "start": "live-server public"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    }
+}

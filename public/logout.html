@@ -1,0 +1,18 @@
+<!-- frontend/public/logout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logout - Sky Books</title>
+</head>
+<body>
+  <script>
+    fetch('http://localhost:3000/auth/logout', {
+      method: 'POST',
+      credentials: 'include'
+    }).then(() => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

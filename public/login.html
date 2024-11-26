@@ -1,0 +1,50 @@
+<!-- frontend/public/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Sky Books</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="blue">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Sky Books</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h3>Login</h3>
+    <div class="row">
+      <div class="col s12 m6">
+        <a href="http://localhost:3000/auth/discord" class="waves-effect waves-light btn purple darken-3">
+          <i class="fab fa-discord left"></i> Login with Discord
+        </a>
+      </div>
+      <div class="col s12 m6">
+        <a href="http://localhost:3000/auth/google" class="waves-effect waves-light btn red darken-1">
+          <i class="fab fa-google left"></i> Login with Google
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/your_font_awesome_kit.js" crossorigin="anonymous"></script>
+  <!-- HTMX -->
+  <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+  <!-- Cookie JS -->
+  <script src="assets/js/cookie.js"></script>
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
